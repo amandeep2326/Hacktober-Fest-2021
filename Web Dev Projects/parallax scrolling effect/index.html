@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax scrolling effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="" class="logo">Logo</a>
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./img/stars.png" id="stars" alt="">
+        <img src="./img/moon.png" alt="" id="moon">
+        <img src="./img/mountains_behind.png" alt="" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="./img/mountains_front.png" alt="" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>
+            he effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g. through the viewfinder and the lens of a camera.
+"what you see in the viewfinder won't be quite what you get in the photograph because of parallax error"
+the angular amount of parallax in a particular case, especially that of a star viewed from different points in the earth's orbit.
+plural noun: parallaxes
+"he succeeded in measuring the parallax of the star 61 Cygni"
+Origin
+late 16th century (also in the general sense ‘fact of seeing wrongly’): from French parallaxe, from Greek parallaxis ‘a change’, from parallassein ‘to alternate’, based on allassein ‘to exchange’ (from allos ‘other’).
+Translate parallax to
+Choose language <br><br>Parallax is the apparent displacement of an object because of a change in the observer's point of view. The video below describes how this effect can be observed in an everyday situation, as well as how it is seen and used for finding distances to stars.
+<br><br>Parallax is a displacement or difference in the apparent position of an object viewed along two different lines of sight, and is measured by the angle or semi-angle of inclination between those two lines.[1][2] Due to foreshortening, nearby objects show a larger parallax than farther objects when observed from different positions, so parallax can be used to determine distances.
+
+To measure large distances, such as the distance of a planet or a star from Earth, astronomers use the principle of parallax. Here, the term parallax is the semi-angle of inclination between two sight-lines to the star, as observed when Earth is on opposite sides of the Sun in its orbit.[a] These distances form the lowest rung of what is called "the cosmic distance ladder", the first in a succession of methods by which astronomers determine the distances to celestial objects, serving as a basis for other distance measurements in astronomy forming the higher rungs of the ladder.
+
+Parallax also affects optical instruments such as rifle scopes, binoculars, microscopes, and twin-lens reflex cameras that view objects from slightly different angles. Many animals, along with humans, have two eyes with overlapping visual fields that use parallax to gain depth perception; this process is known as stereopsis. In computer vision the effect is used for computer stereo vision, and there is a device called a parallax rangefinder that uses it to find range, and in some variations also altitude to a target.
+
+A simple everyday example of parallax can be seen in the dashboard of motor vehicles that use a needle-style non-LCD speedometer gauge. When viewed from directly in front, the speed may show exactly 60, but when viewed from the passenger seat, the needle may appear to show a slightly different speed, due to the angle of viewing. <br><br>Stellar parallax created by the relative motion between the Earth and a star can be seen, in the Copernican model, as arising from the orbit of the Earth around the Sun: the star only appears to move relative to more distant objects in the sky. In a geostatic model, the movement of the star would have to be taken as real with the star oscillating across the sky with respect to the background stars.
+
+Stellar parallax is most often measured using annual parallax, defined as the difference in position of a star as seen from the Earth and Sun, i.e. the angle subtended at a star by the mean radius of the Earth's orbit around the Sun. The parsec (3.26 light-years) is defined as the distance for which the annual parallax is 1 arcsecond. Annual parallax is normally measured by observing the position of a star at different times of the year as the Earth moves through its orbit. Measurement of annual parallax was the first reliable way to determine the distances to the closest stars. The first successful measurements of stellar parallax were made by Friedrich Bessel in 1838 for the star 61 Cygni using a heliometer.[5] Stellar parallax remains the standard for calibrating other measurement methods.
+
+            </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll',()=>{
+            let value = window.scrollY;
+            stars.style.left=value*0.25 + 'px';
+            moon.style.top=value*1.05 + 'px';
+            mountains_behind.style.top=value*0.5 + 'px';
+            mountains_front.style.top=value*0 + 'px';
+            text.style.marginRight=value*4 + 'px';
+            text.style.marginTop=value*1.5 + 'px';
+            btn.style.marginTop=value*1.5 + 'px';
+            header.style.top = value*0.5 + 'px';
+
+        })
+    </script>
+</body>
+</html>
