@@ -8,8 +8,8 @@ https://hacktoberfest.digitalocean.com/
 
 - Chance to contribute to awesome open source projects.
 - Polish you GitHub Skills.
-- Free swags and T-Shirts from Digital Ocean
-- Chance to get a tree planted and make Earth greener
+- Free swags and T-Shirts from Digital Ocean.
+- Chance to get a tree planted and make Earth greener.
 
 -----
 #### What can I contribute?
@@ -33,4 +33,4 @@ git clone <url>
 -----
 
 #### You have successfully submitted your first PR, Repeat the steps for submitting 3 more!!
- **Note:** "Please Don't make any changes to README.MD or submit any spam pull request
+ **Note:** "Please Don't make any changes to README.MD or submit any spam pull request.
