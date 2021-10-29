@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import './App.css';
-import Graph from './algorithms.js/bfs';
+import Graph from './algorithms.js/dfs';
 
 function App() {
   const mygraph = new Graph(25, 50);
