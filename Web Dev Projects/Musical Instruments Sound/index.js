@@ -14,6 +14,7 @@ document.addEventListener("keydown",function(event){
 ani(event.key);
 });
  function Makes(te){
+     te = te.toLowerCase();
     switch(te){
       
         case "a":
@@ -47,6 +48,7 @@ ani(event.key);
     }
  }
  function ani(xd){
+     xd = xd.toLoweCase();
 document.querySelector("."+xd).classList.add("pressed");
 setTimeout(function() {
     document.querySelector("."+xd).classList.remove("pressed");
