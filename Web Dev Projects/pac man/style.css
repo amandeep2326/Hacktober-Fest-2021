@@ -50,3 +50,27 @@
 .scared-ghost {
     background-color: aquamarine;
 }
+#comment
+{
+    display: none;
+    font-size: 72px;
+}
+
+.overlay
+{
+    position: absolute;
+    width:98.5vw;
+    height:98vh;
+    z-index:9999;
+    background-color: rgba(44, 46, 46, 0.671);
+    align-items: center;
+    text-align: center;
+    display: none;
+
+}
+.overlay button
+{
+    padding:10px;
+    background-color:blue;
+    color:#fff;
+}
