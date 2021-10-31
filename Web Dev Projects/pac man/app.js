@@ -213,12 +213,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //check for a game over
-  function checkForGameOver() {
+  async function checkForGameOver() {
     if (squares[pacmanCurrentIndex].classList.contains('ghost') &&
       !squares[pacmanCurrentIndex].classList.contains('scared-ghost')) {
       ghosts.forEach(ghost => clearInterval(ghost.timerId))
       document.removeEventListener('keyup', movePacman)
-      setTimeout(function(){ alert("Game Over"); }, 500)
+      setTimeout(function(){
+        document.getElementsByClassName('overlay')[0].style.display="block";
+        document.getElementById('comment').style.display="block";
+        document.getElementById('comment').innerHTML="Game Over";
+        document.getElementById('comment').style.color="red";
+        }, 500)
+        // location.reload();
     }
   }
 
@@ -227,7 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (score === 274) {
       ghosts.forEach(ghost => clearInterval(ghost.timerId))
       document.removeEventListener('keyup', movePacman)
-      setTimeout(function(){ alert("You have WON!"); }, 500)
+      setTimeout(function(){
+        
+         document.getElementsByClassName('overlay')[0].style.display="block";
+         document.getElementById('comment').style.display="block";
+         document.getElementById('comment').innerHTML="You have Won";
+         document.getElementById('comment').style.color="green";
+         }, 500)
     }
   }
 })
